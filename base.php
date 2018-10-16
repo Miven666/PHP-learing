@@ -275,3 +275,101 @@ var_dump($krsort);
 echo "<br>";
 krsort($krsort);
 var_dump($krsort);
+
+/**
+ * 超级全局变量
+ */
+// $GLOBALS 是PHP的一个超级全局变量组，在一个PHP脚本的全部作用域中都可以访问。
+// $GLOBALS 是一个包含了全部变量的全局组合数组。变量的名字就是数组的键。
+$x = 10;
+$y = 20;
+function addition() {
+    $GLOBALS["z"] = $GLOBALS["x"] + $GLOBALS["y"];
+}
+addition();
+echo $GLOBALS["z"];
+echo "<br>";
+
+// $_SERVER 是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。
+// 这个数组中的项目由Web服务器创建。
+echo "PHP_SELF ======> " . $_SERVER['PHP_SELF'];
+echo "<br>";
+echo "SERVER_NAME ======> " . $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo "HTTP_HOST ======> " . $_SERVER['HTTP_HOST'];
+echo "<br>";
+echo "HTTP_USER_AGENT ======> " . $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo "SCRIPT_NAME ======> " . $_SERVER['SCRIPT_NAME'];
+echo "<br>";
+
+// $_REQUEST 用于收集HTML表单提交的数据。
+// $_POST 被广泛应用于收集表单数据，在HTML form标签的指定该属性："method="post"。
+// $_GET 同样被广泛应用于收集表单数据，在HTML form标签的指定该属性："method="get"。也可以收集URL中发送的数据。
+
+/**
+ * While 循环
+ */
+// while 循环将重复执行代码块，直到指定的条件不成立
+// do...while 语句会至少执行一次代码，然后检查条件，只要条件成立，就会重复进行循环。
+
+/**
+ * For 循环
+ */
+// for 循环用于您预先知道脚本需要运行的次数的情况
+// foreach 循环用于遍历数组
+
+/**
+ * 函数
+ */
+// 内建函数。 在 PHP 中，提供了超过 1000 个内建的函数。
+// 自定义函数。
+// 添加参数。 为了给函数添加更多的功能，我们可以添加参数。参数类似变量。参数就在函数名称后面有一个括号内指定。
+// 返回值。如需让函数返回一个值，请使用 return 语句。
+
+/**
+ * 魔术常量
+ * 这些特殊的常量不区分大小写
+ */
+// __LINE__ 文件中的当前行号。
+echo '这是第"' . __line__ . '"行';
+echo "<br>";
+// __FILE__ 文件的完整路径和文件名。如果用在被包含文件中，则返回被包含的文件名。
+echo '该文件位于 "' . __file__ . '"';
+echo "<br>";
+// __DIR__  文件所在的目录。如果用在被包括文件中，则返回被包括的文件所在的目录。
+echo '该文件位于“' . __DIR__ . '"';
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+
+
+
+
+
+
+
+
+
